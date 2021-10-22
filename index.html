@@ -11,7 +11,7 @@
 <body>
     
     <!-- Logo-->
-    <img src="assets/logo.webp" alt="North Shore Dog logo" class="logo">
+    <a id="logo-block" href="https://nsdog.com"><img src="assets/logo.webp" alt="North Shore Dog logo" id="logo"></a>
 
     <!-- Profile name-->
     <div class="title">
@@ -20,24 +20,26 @@
     </div>
 
     <!-- Links-->
-        <a href="http://www.idogcam.com/idogcamviewer.php?id=530" class="links">Boardwalk</a>
-        <a href="http://www.idogcam.com/idogcamviewer.php?id=531" class="links">Harbor</a>
-        <a href="http://www.idogcam.com/idogcamviewer.php?id=532" class="links">Dunes</a>
-        <a href="http://www.idogcam.com/idogcamviewer.php?id=533" class="links">Tidepool</a>
-        <a href="http://www.idogcam.com/idogcamviewer.php?id=534" class="links">Billiards</a>
+        <a title="Where the big dogs gather!" href="http://www.idogcam.com/idogcamviewer.php?id=530" class="links">Boardwalk</a>
+        <a title="The little pup playroom!" href="http://www.idogcam.com/idogcamviewer.php?id=531" class="links">Harbor</a>
+        <a title="Generally used as an overflow room when we have too many friends for two rooms!" href="http://www.idogcam.com/idogcamviewer.php?id=532" class="links">Dunes</a>
+        <a title="Where our boarders have their slumber parties!" href="http://www.idogcam.com/idogcamviewer.php?id=533" class="links">Tidepool</a>
+        <a title="Our outdoor area, complete with turf and pools for the dogs on hot summer days!" href="http://www.idogcam.com/idogcamviewer.php?id=534" class="links">Billiards</a>
 
-        <p><a href="https://www.facebook.com/northshoredogma" class="socials">Facebook</a></p>
-        <p><a href="https://www.instagram.com/northshoredogma/" class="socials">Instagram</a></p>
-        <p><a href="https://nsdog.com/" class="socials">nsdog.com</a></p>
-
-    <div class="bottom-text">
-        <p>Contact us at</p>
-        <h3><a class="email" href="mailto:info@ecyfl.org">play@nsdog.com</h3></a>
+    <div class="socials-block">
+        <p><a href="https://www.facebook.com/northshoredogma" class="social">Facebook</a></p>
+        <p><a href="https://www.instagram.com/northshoredogma/" class="social">Instagram</a></p>
+        <p><a href="https://nsdog.com/" class="social">nsdog.com</a></p>
     </div>
 
-    <!--- <div class="footer">
-        <h6>Copyright 2021 Sam Chambers</h6>
-    </div> --->
+    <div id="contact-block">
+        <p>Contact us at</p>
+        <p><a id="email" href="mailto:play@nsdog.com">play@nsdog.com</a>
+    </div>
+
+    <div>
+        <a title="Senior floor staff at NSD and creator of the site." id="sitesbysam" href="https://github.com/samchambers">sitesbysam</a></p>
+    </div>
  
 </body>
 
@@ -52,7 +54,7 @@
 }
 
 body {
-    background: url(assets/background.jpg);
+    background: url(assets/background.png);
     background-size: 30%;
     background-repeat: repeat;
     /* background: radial-gradient(circle, rgba(63,63,63,1) 0%, rgba(40,40,40,1) 7%, rgba(27,27,27,1) 22%, rgba(0,0,0,1) 62%);  */
@@ -68,7 +70,15 @@ img {
     scale: 100%;
   }
 
-.logo {
+#logo-block {
+    display: block;
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    height: auto;
+    max-width: 200px;
+}#logo {
     display: block;
     padding-top: 20px;
     margin-left: auto;
@@ -103,47 +113,57 @@ img {
     color: rgb(39, 38, 38);
     transition: color 1s; 
     text-decoration: none;
-    background: rgb(232,167,201);
-background: radial-gradient(circle, rgba(232,167,201,1) 17%, rgba(238,125,184,1) 38%, rgba(173,89,156,1) 63%, rgba(135,69,122,1) 85%); 
-  }
+    background: rgb(219,143,68);
+    background: radial-gradient(
+        circle,
+        rgb(218, 197, 165) 17%,
+        rgb(207, 165, 106) 38%,
+        rgb(212, 136, 49) 63%,
+        rgb(231, 124, 16) 85%);
+} .links:hover {
+    color: black;
+    background: rgb(219,143,68);
+    background: radial-gradient(
+        circle,
+        rgba(218, 197, 165, 0.5) 17%,
+        rgba(207, 165, 106, 0.5) 38%,
+        rgba(212, 136, 49, 0.5) 63%,
+        rgba(231, 124, 16, 0.5) 85%);
+}
 
-.socials {
+.socials-block {
+    padding-top: 20px;
+} .social {
     text-align: center;
     font-size: 25px;
     color: rgb(0, 0, 0);
     transition: color 200ms; 
     text-decoration: none;
+} .social:hover {
+    color: rgb(77, 77, 77);
 }
 
-.links:hover {
-    color: black;
-    background: rgb(232,167,201);
-background: radial-gradient(circle, rgba(232,167,201,0.75) 17%, rgba(238,125,184,0.75) 38%, rgba(173,89,156,0.75) 63%, rgba(135,69,122,0.75) 85%); 
-}
-
-.socials:hover {
-    color: rgb(58, 58, 58);
-}
-
-.bottom-text {
-    line-height: 10px;
-    padding-bottom: 20px;
-    text-align: center;
-    margin-top: 40px;
-    /* font-weight: bold; */
-}
-
-p.bottom-text {
-    font-size: 14px;
-}
-
-.email {
+#contact-block {
+    padding-top: 20px;
+    line-height: 1;
+} #email {
     text-decoration: none;
     font-size: 20px;
-    color: rgb(173,89,156,0.75);
+    color: rgb(219,143,68);
     transition: color 200ms; 
-} .email:hover {
-    color: rgba(122, 53, 109, 0.75);
+} #email:hover {
+    color: rgba(219,143,68,0.75);
+}
+
+#sitesbysam {
+        display: block;
+        padding-top: 20px;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        margin-bottom: 15px;
+        text-decoration: none;
+} #sitesbysam:hover {
+    color: rgba(0, 0, 0, 0.75);
 }
 </style>
 
